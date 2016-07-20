@@ -4,11 +4,19 @@
 
 ## APP
 Xcode 编译代码以后，除了一些资源文件，会生成 `.APP` 的可执行文件，这个可执行文件的组成可以通过开启编译选项 `Write Link Map File` 得到可执行文件的详细信息。如下图所示: 
+
+<p align='center'>
+![objc-isa-class-pointer](../images/3.pic.jpg)
+
 解析 `linkMap` 的文件，我们可以发现目标文件列表，描述了我们引用的第三方的静态链接库(.a)的地址。接着是一个段表，表明了代码段、数据段、数据等在文件中的偏移位置及大小。
 
 
 ## Kernel
 引用**《Mac OS X and iOS Internals : To the Apple's Core》**中图片的描述:
+
+<p align='center'>
+![objc-isa-class-pointer](../images/4.pic.jpg)
+
 当 Kernel 为我们应用程序初始化好进程和空间后，核心步骤大概分为4步，首先通过 `exec_active_iamge`方法加载编译好的可执行文件，之后会通过 `load_dylinker` 方法载入动态链接器，然后通过 thread_setuserstack 方法配置用户栈环境，最后通过 `thread_setentrypoint` 方法指定动态链接器的入口。
 
 ## dyld
@@ -16,6 +24,10 @@ apple开源的动态链接解析器。iOS中用到的所有系统 framework 都�
 
 ## +load()
 在main函数执行前，所有的OC实现类都会先执行`load()`方法。添加全局断点就可以调试出这个特性:
+
+<p align='center'>
+![objc-isa-class-pointer](../images/5.pic.jpg)
+
 这也引出一个开发中需要十分注意的地方，因为load方法在main之前执行的，所以如果重载了这个方法就会在应用启动的过程中占用cpu时间，造成启动缓慢。
 
 ## main
