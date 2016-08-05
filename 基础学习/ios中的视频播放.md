@@ -19,23 +19,23 @@ Box结构图
 ####1.2.1 Movie atom
 `Movie atom` 通常包含一个 `Movie Header atom（mvhd)` 包含至少一个track atom; 另外还存在一些可选的 atom ，如下图所示：
 <p align='center'>
-![objc-isa-class-pointer](../images/movieatom1.pic.jpg =594x163)
+![objc-isa-class-pointer](../images/movieatom.jpg =594x163)
 
 ###1.2.2 Movie header atom
 `Movie header atom` 定义整个 movie 的`time scale`, `duration`, `创建时间`, `修改时间`等详细信息,其中`duration / timescale`等于可以播放的时长。主要属性和结构如下:
 <p align='center'>
-![objc-isa-class-pointer](../images/Movieheader atom.pic.jpg =593x279)
+![objc-isa-class-pointer](../images/Movieheaderatom.jpg =593x279)
 
 ###1.2.3 Track atom
 `Track atom` 定义了每个音频轨道、字幕轨道、视频轨道的具体描述信息。一个MP4文件中的媒体可以包含多个track，且至少有一个track，这些track之间彼此独立，有自己的时间和空间信息。`trak`必须包含一个`tkhd`和一个`mdia`，这时候 通过 Track atom
 的自我描述，可以识别正确的轨道。具体如下:
 <p align='center'>
-![objc-isa-class-pointer](../images/Track atom.pic.jpg =593x279)
+![objc-isa-class-pointer](../images/Trackatom.jpg =593x279)
 
 ###1.2.4 Track header atom
 `Track header atom` 定义了Track的`Track ID`, `Track时长`, `创建时间`, `修改时间`等详细信息，具体如下:
 <p align='center'>
-![objc-isa-class-pointer](../images/trackheaderatom.pic.jpg =593x455)
+![objc-isa-class-pointer](../images/trackheaderatom.jpg =593x455)
 
 ###1.2.5 Media atom
 `Media atom(mdia)` 定义了track媒体类型以及sample数据，描述sample信息。一般 mdia 包含 `media header box(mdhd)`, `handler reference box(hdlr)` 和 `media information box(minf)`。
