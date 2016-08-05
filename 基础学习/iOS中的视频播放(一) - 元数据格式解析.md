@@ -1,9 +1,9 @@
 #iOS中的视频播放(一) - 元数据格式解析
-在Apple的环境下，主要遇到的媒体分为以下四种，`quicktime(mov)`，`MPEG-4 video`([链接](https://zh.wikipedia.org/wiki/MP4))，`MPEG-4 audio`，`mp3`。其中视频播放的元数据主要是MP4和mov，而MP4派生于mov,所以他们的格式文件是很相似的，这里详细分析以下MP4的文件格式。
+在Apple的环境下，主要遇到的媒体分为以下四种，`quicktime(mov)`，`MPEG-4 video`([链接](https://zh.wikipedia.org/wiki/MP4))，`MPEG-4 audio`，`MPEG-Layer3`。其中视频播放的元数据主要是MP4和mov，而MP4派生于mov,所以他们的格式文件是很相似的，这里详细分析以下MP4的文件格式。
 
 ####1.1 基本概念
 1. `文件`, 是由一种称为 atoms(boxs) 的数据结构组成。
-2. `atoms`([链接](http://mp4ra.org/atoms.html)), 一个 atom 包含了描述媒体的某种数据的集合或者其他 atom。每个 Box 都是由 Header 和 data 组成。标准的box开头的4个字节为 `box size`，该大小包括 `box header` 和 `box body` 整个 box 的大小，这样我们就可以在文件中定位各个 box。size 后面紧跟的32位为 `box type`, 一般是4个字符，如`ftyp`、`moov`等，这些 box type 都是已经预定义好的, 分别表示固定的意义。如果是 `uuid`, 表示该 box 为用户扩展类型。如果 box type 是未定义的，应该将其忽略。
+2. `Atoms`([链接](http://mp4ra.org/atoms.html)), 一个 atom 包含了描述媒体的某种数据的集合或者其他 atom。每个 Box 都是由 Header 和 data 组成。标准的box开头的4个字节为 `box size`，该大小包括 `box header` 和 `box body` 整个 box 的大小，这样我们就可以在文件中定位各个 box。size 后面紧跟的32位为 `box type`, 一般是4个字符，如`ftyp`、`moov`等，这些 box type 都是已经预定义好的, 分别表示固定的意义。如果是 `uuid`, 表示该 box 为用户扩展类型。如果 box type 是未定义的，应该将其忽略。
 3. `Header`, 包含了整个 atom 的长度 size 和类型 type。
 4. `Data`, 是 atom 的实际数据，可以是纯数据也可以是更多的子 atoms。
 
@@ -13,7 +13,7 @@
 <p align='center'>
 Box结构图
 
-### 1.2 atom详解
+### 1.2 Atom详解
 在1.1中了解到，视频文件的核心就是基本数据结构atoms。atoms主要分为分为 `Movie atom`,`Movie header atom` , `Track atom`, `Track Header atom`, `Media atom`,  `Video media information atom`, `Sample table atom`。一般来说，解析媒体文件，最关心的部分是视频文件的宽高、时长、码率、编码格式、帧列表、关键帧列表，以及所对应的时戳和在文件中的位置，这些信息，主要包含在 atoms 的header里。
 
 ####1.2.1 Movie atom
