@@ -23,14 +23,14 @@ Box结构图
 <img src="../images/movieatom.jpg" width="594" height="163" alt="图片名称"/>
 </div>
 
-###1.2.2 Movie header atom
+####1.2.2 Movie header atom
 `Movie header atom` 定义整个 movie 的`time scale`, `duration`, `创建时间`, `修改时间`等详细信息,其中`duration / timescale`等于可以播放的时长。主要属性和结构如下:
 
 <div align=center>
 <img src="../images/Movieheaderatom.jpg" width="594" height="279" alt="图片名称"/>
 </div>
 
-###1.2.3 Track atom
+####1.2.3 Track atom
 `Track atom` 定义了每个音频轨道、字幕轨道、视频轨道的具体描述信息。一个MP4文件中的媒体可以包含多个track，且至少有一个track，这些track之间彼此独立，有自己的时间和空间信息。`trak`必须包含一个`tkhd`和一个`mdia`，这时候 通过 Track atom
 的自我描述，可以识别正确的轨道。具体如下:
 
@@ -38,18 +38,18 @@ Box结构图
 <img src="../images/Trackatom.jpg" width="594" height="279" alt="图片名称"/>
 </div>
 
-###1.2.4 Track header atom
+####1.2.4 Track header atom
 `Track header atom` 定义了Track的`Track ID`, `Track时长`, `创建时间`, `修改时间`等详细信息，具体如下:
 
 <div align=center>
 <img src="../images/trackheaderatom.jpg" width="594" height="455" alt="图片名称"/>
 </div>
 
-###1.2.5 Media atom
+####1.2.5 Media atom
 `Media atom(mdia)` 定义了track媒体类型以及sample数据，描述sample信息。一般 mdia 包含 `media header box(mdhd)`, `handler reference box(hdlr)` 和 `media information box(minf)`。
 其中，mdhd 的 `language`字段代表了媒体语言码。hdlr解释了媒体的播放过程信息。minf 存储了解释 track 媒体数据的 `handler-specific` 信息，media handler用这些信息将媒体时间映射到媒体数据并进行处理,它的字段`opcolor`表述了视频的 RGB。其它的一些字段不再分析，与mvhd重复。
 
-###1.2.6 Sample table atom
+####1.2.6 Sample table atom
 `Sample table atom(stbl)` 几乎是普通的MP4文件中最复杂的一个box，含了关于 track 中 sample 所有时间和位置的信息，以及sample的编解码等信息。利用这个表，可以解释 sample 的时序、类型、大小以及在各自存储容器中的位置。stbl 是一个`container box`，其子box包括：`sample description box（stsd`）、`time to sample box（stts)`、`sample size box（stsz或stz2）`、`sample to chunk box（stsc）`、`chunk offset box（stco或co64）`、`composition time to sample box（ctts）`、`sync sample box（stss）`等。
 
 * `stsd`存储了 media sample 的存储位置。
