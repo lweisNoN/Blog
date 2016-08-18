@@ -16,7 +16,7 @@ self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
 self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
 ```
 
-上述是一段播放视频的代码，我们首先通过视频资源 url 初始化视频数据容器 `AVAsset`，然后通过 AVAsset 初始化视频描述和控制对象 `AVPlayerItem`，然后通过 AVPlayerItem 初始化视频播放器 `AVPlayer`，最后将视频播放器绑定到具体的播放 layer 进行渲染。本文将详细讲解这些对象类型。
+上述是一段播放视频的代码，通过视频资源 url 初始化视频数据容器 `AVAsset`，使用 AVAsset 初始化视频描述和控制对象 `AVPlayerItem`，然后通过 AVPlayerItem 初始化视频播放器 `AVPlayer`，最后将视频播放器绑定到具体的播放 layer 进行视频图层的渲染。本文将详细讲解这些对象类型。
 
 ###  [AVAsset](https://developer.apple.com/reference/avfoundation/avasset)
 `AVAsset` 承载了媒体的视频和声音等元数据，是一个抽象的基类。由多种 `AVAssetTrack`（音频轨道、字幕轨道、视频轨道等）集合组成。
