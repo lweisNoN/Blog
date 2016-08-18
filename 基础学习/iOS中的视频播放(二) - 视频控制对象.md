@@ -67,13 +67,13 @@ AVAsset 有如下重要属性。
 @property (nonatomic, readonly) NSArray<NSString *> *availableMetadataFormats;
 ```
 
- `trackID` 是 track 的唯一映射。方法
+ `trackID` 是 track 的唯一映射。可以通过方法
 
 ```
 - (nullable AVAssetTrack *)trackWithTrackID:(CMPersistentTrackID)trackID;
 ```
 
-可以通过 trackID 获得唯一的 AVAssetTrack。
+使用 trackID 获得唯一的 AVAssetTrack。
 
  `mediaType` 总共描述了8种类型的轨道，
 
@@ -89,13 +89,13 @@ AVMediaTypeMetadata
 AVMediaTypeMuxed
 ```
 
-方法
+可以通过方法
 
 ```
 - (NSArray<AVAssetTrack *> *)tracksWithMediaType:(NSString *)mediaType
 ```
 
-可以通过 mediaType 获得一组符合需求的 AVAssetTrack。
+使用 mediaType 获得一组符合需求的 AVAssetTrack。
 
 如果要查看视频的元数据，例如 Title、Creator、CreationDate、LastModifiedDate等，可以通过方法
 
