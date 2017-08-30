@@ -142,7 +142,7 @@
 
 >### Algorithm
 
-1. t.b.d.
+1. [leecode 题解][4]
 
 >### 项目经验
 
@@ -158,3 +158,4 @@
 [1]: https://github.com/ChenYilong/iOSInterviewQuestions
 [ 2 ]: https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/
 [3]: http://blog.csdn.net/beyond_cn/article/details/12998247
+[4]: https://siddontang.gitbooks.io/leetcode-solution/content/
