@@ -147,10 +147,14 @@
 >### 项目经验
 
 1. 音视频基础和总结
-2. ​
+2. OpenGL
 
 >### Blog 
 
 1. [iOSInterviewQuestions][1]
+2. [OpenGL 学习][2]
+3. [YUV格式][3]
 
 [1]: https://github.com/ChenYilong/iOSInterviewQuestions
+[ 2 ]: https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/
+[3]: http://blog.csdn.net/beyond_cn/article/details/12998247
