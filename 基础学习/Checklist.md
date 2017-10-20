@@ -152,8 +152,11 @@
 
 1. 音视频基础和总结
 2. OpenGL
+    
     * [obj 文件解析](http://blog.csdn.net/szchtx/article/details/8628265)
-    * [几何变换](http://www.cnblogs.com/graphics/archive/2012/08/08/2609005.html)
+    
+    * [几何变换](http://www.cnblogs.com/graphics/archive/2012/08/08/2609005.html)
+    
 >### Blog 
 
 1. [iOSInterviewQuestions][1]
