@@ -1,5 +1,29 @@
 ## Checklist
 
+>### 性能调优
+1. [iOS 性能监控方案 Wedjat 之基础性能篇](https://github.com/aozhimin/iOS-Monitor-Platform/blob/master/iOS-Monitor-Platform_Basic.md)
+2. [iOS 性能监控方案 Wedjat 之网络篇](https://github.com/aozhimin/iOS-Monitor-Platform/blob/master/iOS-Monitor-Platform_Network.md)
+
+>### Algorithm
+
+1. [leecode 题解][4]
+
+>### 项目经验
+
+1. 音视频基础和总结
+2. OpenGL
+    
+    * [obj 文件解析](http://blog.csdn.net/szchtx/article/details/8628265)
+    
+    * [几何变换](http://www.cnblogs.com/graphics/archive/2012/08/08/2609005.html)
+    
+>### Blog 
+
+1. [iOSInterviewQuestions][1]
+2. [OpenGL 学习][2]
+3. [YUV格式][3]
+4. [iOS开发下的函数响应式编程][5]
+
 >### Interview iOS
 
 1. 上来让介绍各种属性，其实挺基础的，讲到strong和Retain就傻逼了，两个都是强引用，然后我说strong更偏向自己生成的强引用，其实它们的区别只是ARC和非ARC情况下的强引用，然后面试官不依不饶盯住这个点说Retain就不是自己生成的了？纠结了有一会，此处已扣分，然后其他属性就没说了(真他妈该先介绍其他属性的)
@@ -139,30 +163,6 @@
 57. [※※※]如何调试BAD_ACCESS错误
 
 58. [※※※]lldb（gdb）常用的调试命令？
-
->### 性能调优
-1. [iOS 性能监控方案 Wedjat 之基础性能篇](https://github.com/aozhimin/iOS-Monitor-Platform/blob/master/iOS-Monitor-Platform_Basic.md)
-2. [iOS 性能监控方案 Wedjat 之网络篇](https://github.com/aozhimin/iOS-Monitor-Platform/blob/master/iOS-Monitor-Platform_Network.md)
-
->### Algorithm
-
-1. [leecode 题解][4]
-
->### 项目经验
-
-1. 音视频基础和总结
-2. OpenGL
-    
-    * [obj 文件解析](http://blog.csdn.net/szchtx/article/details/8628265)
-    
-    * [几何变换](http://www.cnblogs.com/graphics/archive/2012/08/08/2609005.html)
-    
->### Blog 
-
-1. [iOSInterviewQuestions][1]
-2. [OpenGL 学习][2]
-3. [YUV格式][3]
-4. [iOS开发下的函数响应式编程][5]
 
 [1]: https://github.com/ChenYilong/iOSInterviewQuestions
 [ 2 ]: https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/
