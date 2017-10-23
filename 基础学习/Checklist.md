@@ -21,7 +21,7 @@
    
     * [大眼](http://www.jianshu.com/p/51d8dd99d27d)
     
-    * [瞳孔识别] (https://github.com/elucideye/drishti)
+    * [瞳孔识别](https://github.com/elucideye/drishti)
     
     * [瞳孔识别2](http://blog.csdn.net/computerme/article/details/38142125)
     
