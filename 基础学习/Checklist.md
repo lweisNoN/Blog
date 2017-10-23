@@ -17,6 +17,14 @@
     
     * [几何变换](http://www.cnblogs.com/graphics/archive/2012/08/08/2609005.html)
     
+    * [瘦脸](http://www.shenyanhao.com/2015/09/%E7%9C%BC%E7%9D%9B%E6%94%BE%E5%A4%A7%E7%BE%8E%E9%A2%9C%E7%AE%97%E6%B3%95/)
+   
+    * [大眼](http://www.jianshu.com/p/51d8dd99d27d)
+    
+    * [瞳孔识别] (https://github.com/elucideye/drishti)
+    
+    * [瞳孔识别2](http://blog.csdn.net/computerme/article/details/38142125)
+    
 >### Blog 
 
 1. [iOSInterviewQuestions][1]
