@@ -187,13 +187,13 @@ function updatebackgroundTexture(video)
 
 Mac Chrome 的运行效果:
 
-![data1](/Users/luhai/Documents/12月/data1.gif)
+![data1](https://github.com/lweisNoN/Blog/blob/master/images/data1.gif)
 
 
 
 小程序中的运行效果：
 
-![data2](/Users/luhai/Documents/12月/data2.gif)
+![data2](https://github.com/lweisNoN/Blog/blob/master/images/data2.gif)
 
 
 
