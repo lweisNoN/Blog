@@ -28,22 +28,7 @@
 
 **简单流程**：
 
-```sequence
-participant 主程序
-participant Video标签
-participant 模型
-participant 渲染引擎
-
-Video标签->模型: MediaStream
-Video标签->渲染引擎: MediaStream
-Note right of 渲染引擎: 通过点位和视频流绘制 3D 图形
-模型-->主程序: 点位信息
-主程序->渲染引擎: 点位信息
-
-```
-
-
-
+![data3](https://github.com/lweisNoN/Blog/blob/master/images/tf1.jpg)
 
 
 ### 通过 TensorFlow.js 识别特征点
