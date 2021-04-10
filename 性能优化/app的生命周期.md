@@ -1,3 +1,5 @@
+新版本源码已经有较大的改动，eg +load 就在 load mapped images 中动态调用，下文已经无效
+
 #iOS APP 的生命周期
 ## 前言
 我们习惯而轻松的在framework下编写APP，通过CocoaMVC管理每个页面的生命周期，可是一个APP的生命周期是什么样的呢？本篇文章会以开源项目RMNetwork简述一个APP的生命周期。
@@ -22,13 +24,13 @@ Xcode 编译代码以后，除了一些资源文件，会生成 `.APP` 的可执
 ## dyld
 apple开源的动态链接解析器。iOS中用到的所有系统 framework 都是动态链接的，在上述步骤中，Kernel指定了动态链接器的入口，dyld会将程序依赖的动态链接库递归加载进内存，查找并绑定符号，最后找到可执行文件的main函数，准备参数并调用。dyld会将程序依赖的动态链接库递归加载进内存。
 
-## +load()
+~~## +load()
 在main函数执行前，所有的OC实现类都会先执行`load()`方法。添加全局断点就可以调试出这个特性:
 
 <p align='center'>
 ![objc-isa-class-pointer](../images/5.pic.jpg)
 
-这也引出一个开发中需要十分注意的地方，因为load方法在main之前执行的，所以如果重载了这个方法就会在应用启动的过程中占用cpu时间，造成启动缓慢。
+~~这也引出一个开发中需要十分注意的地方，因为load方法在main之前执行的，所以如果重载了这个方法就会在应用启动的过程中占用cpu时间，造成启动缓慢。
 
 ## main
    进入我们最熟悉的main入口后，系统通过在`@autoreleasepool`将我们的程序放在了自动释放池中，同时启动了Main Run Loop，会通过runloop管理我们的应用事件，并在runloop的循环间隙中，通过内存引用双链表管理内存。同时，也会在这里指定app运行时的代理app delegate。
