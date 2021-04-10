@@ -1,4 +1,6 @@
-新版本源码已经有较大的改动，eg +load 就在 load mapped images 中动态调用，下文已经无效
+**新版本源码已经有较大的改动，eg +load 就在 load mapped images 中动态调用，下文已经无效**
+
+--
 
 #iOS APP 的生命周期
 ## 前言
